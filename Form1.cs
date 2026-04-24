@@ -17,6 +17,8 @@ namespace BIBLIOTECAREMAKE
         private Usuarios usuarios;
         private Livros livros;
         private Status status;
+        private Consulta consulta;
+
         public Form1()
         {
             InitializeComponent();
@@ -31,10 +33,10 @@ namespace BIBLIOTECAREMAKE
             tpFuncionarios.Controls.Add(funcionarios);
             funcionarios.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
 
-           usuarios = new Usuarios();
-           usuarios.Dock = DockStyle.Fill;
-           tpUsuarios.Controls.Add(usuarios);
-           usuarios.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
+            usuarios = new Usuarios();
+            usuarios.Dock = DockStyle.Fill;
+            tpUsuarios.Controls.Add(usuarios);
+            usuarios.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
 
             livros = new Livros();
             livros.Dock = DockStyle.Fill;
@@ -45,8 +47,9 @@ namespace BIBLIOTECAREMAKE
             status.Dock = DockStyle.Fill;
             tpStatus.Controls.Add(status);
             status.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
+
         }
-        
+
         private void VoltarTelaPrincipal(object sender, EventArgs e)
         {
             tcControle.SelectTab(tpTelaPrincipal);
@@ -65,12 +68,12 @@ namespace BIBLIOTECAREMAKE
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
-                funcionarios.Dispose();
-                funcionarios = null;
-                tpFuncionarios.Controls.Clear();
-                funcionarios = new Funcionarios();
-                funcionarios.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
-                tpFuncionarios.Controls.Add(funcionarios);
+            funcionarios.Dispose();
+            funcionarios = null;
+            tpFuncionarios.Controls.Clear();
+            funcionarios = new Funcionarios();
+            funcionarios.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
+            tpFuncionarios.Controls.Add(funcionarios);
             tcControle.SelectTab(tpFuncionarios);
         }
 
@@ -87,7 +90,7 @@ namespace BIBLIOTECAREMAKE
 
         private void btnLivros_Click(object sender, EventArgs e)
         {
-            
+
             livros.Dispose();
             livros = null;
             tpLivros.Controls.Clear();
@@ -108,6 +111,37 @@ namespace BIBLIOTECAREMAKE
             status.Controls.Find("btnHome", true).First().Click += VoltarTelaPrincipal;
             tpStatus.Controls.Add(status);
             tcControle.SelectTab(tpStatus);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmprestar_Click(object sender, EventArgs e)
+        {
+            if (status == null)
+                status.Dispose();
+            status = new Status();
+            status.Dock = DockStyle.Fill;
+            tcEmprestimo.SelectTab(tpEmprestar);
+            tpEmprestar.Controls.Add(status);
+
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            if (consulta == null)
+                consulta.Dispose();
+            consulta = new Consulta();
+            consulta.Dock = DockStyle.Fill;
+            tcEmprestimo.SelectTab(tpConsulta);
+            tpConsulta.Controls.Add(consulta);
         }
     }
 }

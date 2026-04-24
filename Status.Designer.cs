@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.btnHome = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lboLivros = new System.Windows.Forms.ListBox();
+            this.lboUsuario = new System.Windows.Forms.ListBox();
+            this.cboDados = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnStatus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHome
@@ -47,90 +48,102 @@
             this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHome.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(632, 130);
+            this.btnHome.Location = new System.Drawing.Point(724, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnHome.Size = new System.Drawing.Size(117, 108);
+            this.btnHome.Size = new System.Drawing.Size(96, 81);
             this.btnHome.TabIndex = 34;
             this.btnHome.Text = "Home";
             // 
-            // textBox3
+            // lboLivros
             // 
-            this.textBox3.Location = new System.Drawing.Point(94, 319);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 33;
+            this.lboLivros.FormattingEnabled = true;
+            this.lboLivros.Location = new System.Drawing.Point(109, 173);
+            this.lboLivros.Name = "lboLivros";
+            this.lboLivros.Size = new System.Drawing.Size(271, 121);
+            this.lboLivros.TabIndex = 35;
             // 
-            // label4
+            // lboUsuario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 303);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Telefone";
+            this.lboUsuario.FormattingEnabled = true;
+            this.lboUsuario.Location = new System.Drawing.Point(417, 173);
+            this.lboUsuario.Name = "lboUsuario";
+            this.lboUsuario.Size = new System.Drawing.Size(271, 121);
+            this.lboUsuario.TabIndex = 36;
             // 
-            // textBox2
+            // cboDados
             // 
-            this.textBox2.Location = new System.Drawing.Point(94, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Email";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(94, 205);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 189);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Cargo";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(94, 146);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
-            this.txtNome.TabIndex = 27;
+            this.cboDados.FormattingEnabled = true;
+            this.cboDados.Location = new System.Drawing.Point(109, 63);
+            this.cboDados.Name = "cboDados";
+            this.cboDados.Size = new System.Drawing.Size(579, 21);
+            this.cboDados.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 130);
+            this.label1.Location = new System.Drawing.Point(109, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Nome";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Selecione:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(109, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Digite um livro pra consultar:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(414, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Digite o nome do cliente:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(109, 147);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(271, 20);
+            this.textBox1.TabIndex = 42;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(417, 147);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(271, 20);
+            this.textBox2.TabIndex = 43;
+            // 
+            // btnStatus
+            // 
+            this.btnStatus.Location = new System.Drawing.Point(339, 383);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Size = new System.Drawing.Size(124, 38);
+            this.btnStatus.TabIndex = 44;
+            this.btnStatus.Text = "Status";
+            this.btnStatus.UseVisualStyleBackColor = true;
+            this.btnStatus.Click += new System.EventHandler(this.btnEmprestar_Click);
             // 
             // Status
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboDados);
+            this.Controls.Add(this.lboUsuario);
+            this.Controls.Add(this.lboLivros);
+            this.Controls.Add(this.btnHome);
             this.Name = "Status";
             this.Size = new System.Drawing.Size(841, 468);
             this.ResumeLayout(false);
@@ -141,13 +154,14 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnHome;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox lboLivros;
+        private System.Windows.Forms.ListBox lboUsuario;
+        private System.Windows.Forms.ComboBox cboDados;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnStatus;
     }
 }
